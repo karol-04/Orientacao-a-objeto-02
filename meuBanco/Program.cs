@@ -15,6 +15,18 @@ namespace meuBanco
             Console.WriteLine("O titular da conta é: " +contaDaKarol.titular);
             Console.WriteLine("O titular da conta é: " +contaDoKaique.titular);
             Console.WriteLine("O titular da conta é: " +contaDaKatlin.titular);
+
+            bool retorno = contaDaKarol.Sacar(50);
+            //Console.WriteLine(retorno);
+            Console.WriteLine("O saldo da conta da Karol é: " + contaDaKarol.saldo);
+
+            contaDaKarol.Depositar(150);
+            Console.WriteLine("O saldo da conta da Karol é: " + contaDaKarol.saldo);
+
+            contaDaKarol.Transferir(50, contaDoKaique);
+            Console.WriteLine("O saldo da conta da Karol é: " + contaDaKarol.saldo);
+            Console.WriteLine("O saldo da conta do Kaique é: " + contaDoKaique.saldo);
+
         }
     }
 }
