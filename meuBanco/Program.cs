@@ -8,7 +8,7 @@ namespace meuBanco
         {
             ContaCorrente contaDaKarol = new ContaCorrente("Karol", 1234, 789, 100.50);
             
-            contaDaKarol.conta = 890;
+            contaDaKarol.Conta = 890;
 
             ContaCorrente contaDoKaique = new ContaCorrente("Kaique", 4321, 987, 120);
 
@@ -23,10 +23,11 @@ namespace meuBanco
             contaDaKarol.Depositar(150);
             contaDaKarol.Transferir(50, contaDoKaique);*/
 
-            Console.WriteLine("O número da conta da Karol é: "+ contaDaKarol.conta);
-            Console.WriteLine("O saldo da conta da Karol é: " + contaDaKarol.saldo);
-            Console.WriteLine("O número da conta do Kaique é: " + contaDoKaique.conta);
-            Console.WriteLine("O saldo da conta do Kaique é: " + contaDoKaique.saldo);
+            Console.WriteLine("O número da conta da Karol é: "+ contaDaKarol.Conta);
+            Console.WriteLine("O saldo da conta da Karol é: " + contaDaKarol.Saldo);
+            Console.WriteLine("O número da conta do Kaique é: " + contaDoKaique.Conta);
+            Console.WriteLine("O saldo da conta do Kaique é: " + contaDoKaique.Saldo);
+            Console.WriteLine("O total de contas criadas é: " + ContaCorrente.TotalDeContasCriadas);
 
         }
     }

@@ -1,7 +1,10 @@
 public class ContaCorrente{
-    public string titular {get; set;}
-    public int agencia {get; set;}
-    public int conta {get; set;}
+    public string Titular {get; set;}
+    public int Agencia {get; set;}
+    public int Conta {get; set;}
+    
+    public static int TotalDeContasCriadas {get; set;}
+
     private double saldo;
 
     public double Saldo
@@ -23,9 +26,11 @@ public class ContaCorrente{
 
     public ContaCorrente(string contacorrente_titular, int contacorrente_agencia, int contacorrente_conta, double contacorrente_saldo) 
     { 
-        titular = contacorrente_titular;
-        agencia = contacorrente_agencia;
+        Titular = contacorrente_titular;
+        Agencia = contacorrente_agencia;
         saldo = contacorrente_saldo; 
+
+        TotalDeContasCriadas ++;
     } 
 
     public bool Sacar (double valor)
